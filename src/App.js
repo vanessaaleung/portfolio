@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Contact from './components/Contact';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Raleway, Arial',
+  }
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MuiThemeProvider theme={theme}>
+        <Navbar collapseOnSelect expand="md">
+          <Navbar.Brand as={Link} to="/">Portfolio</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="https://medium.com/@vanessaaleung">Blog</Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/in/vanessaaleung/">LinkedIn</Nav.Link>
+              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/contact' component={Contact} />
+        </Switch>
+      </MuiThemeProvider>
+    </BrowserRouter>
   );
 }
 
