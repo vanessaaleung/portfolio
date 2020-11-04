@@ -36,3 +36,12 @@
   font-weight: bold;
   box-shadow: none !important;
 }
+
+/* Contact */
+.contact-info {
+  margin-top: 50px;
+}
+
+.contact-info-section {
+  margin-top: 20px;
+}
