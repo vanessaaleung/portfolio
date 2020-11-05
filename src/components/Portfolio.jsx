@@ -95,8 +95,8 @@ function AutoGrid(props) {
                       );
                       
   const content = projectRows.map((row, idx) => (
-    <Grid container xs={12} spacing={8} key={idx} className={classes.container}>
-      { row.map((proj, idx) => (
+    <Grid container spacing={8} key={idx} className={classes.container}>
+      { row.map((proj, _) => (
         <Grid item xs={4} key={proj.id}>
           <Paper className={classes.paper}>
             <ButtonBase focusRipple key={proj.title} 
@@ -161,7 +161,7 @@ function Portfolio() {
       <div className="filters">
         <Button variant="link" onClick={() => setFilter('all')}>All</Button>
         <Button variant="link" onClick={() => setFilter('visualization')}>Visualization</Button>
-        <Button variant="link" onClick={() => setFilter('ds')}>Data Science</Button>
+        <Button variant="link" onClick={() => setFilter('ds')}>Data Analytics</Button>
         <Button variant="link" onClick={() => setFilter('dataEng')}>Data Engineering</Button>
         <Button variant="link" onClick={() => setFilter('web')}>Web</Button>
         <Button variant="link" onClick={() => setFilter('mobileGame')}>Mobile & Game</Button>
