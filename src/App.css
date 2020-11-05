@@ -9,6 +9,33 @@
   margin-right: 100px;
 }
 
+/* Contact */
+.contact {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.email {
+  font-size: 100px;
+  color: black;
+  font-weight: bold;
+}
+
+.email:hover {
+  color: #F86449;
+  text-decoration: none;
+}
+
+
 /* Navigation */
 .navbar {
   margin-top: 20px;
@@ -37,11 +64,3 @@
   box-shadow: none !important;
 }
 
-/* Contact */
-.contact-info {
-  margin-top: 50px;
-}
-
-.contact-info-section {
-  margin-top: 20px;
-}
