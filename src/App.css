@@ -57,6 +57,7 @@
 .btn-link {
   color: black !important;
   outline: none !important;
+  text-align: left !important;
 }
 
 .btn-link:active, .btn-link:focus {
