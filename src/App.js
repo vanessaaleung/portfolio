@@ -14,10 +14,10 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <MuiThemeProvider theme={theme}>
         <Navbar collapseOnSelect expand="md">
-          <Navbar.Brand as={Link} to={process.env.PUBLIC_URL + '/'}>Portfolio</Navbar.Brand>
+          <Navbar.Brand as={Link} to='/'>Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
@@ -28,8 +28,8 @@ function App() {
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-          <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/contact' component={Contact} />
         </Switch>
       </MuiThemeProvider>
     </BrowserRouter>
