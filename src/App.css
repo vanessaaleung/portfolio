@@ -7,6 +7,7 @@
   margin-top: 100px;
   overflow-x: hidden;
 }
+
 @media screen and (max-width: 719px) {
   .home {
     margin-left: 20px;
@@ -42,16 +43,40 @@
 }
 
 .email {
-  font-size: 100px;
+  font-size: 40px;
   color: black;
   font-weight: bold;
+}
+
+span.line {
+  display: inline-block;
+}
+
+@media screen and (max-width: 375px) {
+  .contact h4 {
+    font-size: 12px;
+  }
+  .email {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 376px) and (min-width: 1024px) {
+  .email {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1265px) {
+  .email {
+    font-size: 60px;
+  }
 }
 
 .email:hover {
   color: #F86449;
   text-decoration: none;
 }
-
 
 /* Navigation */
 .navbar {
@@ -79,6 +104,8 @@
   color: black !important;
   outline: none !important;
   text-align: left !important;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .btn-link:active, .btn-link:focus {
