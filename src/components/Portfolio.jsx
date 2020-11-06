@@ -97,7 +97,7 @@ function AutoGrid(props) {
   const content = projectRows.map((row, idx) => (
     <Grid container spacing={8} key={idx} className={classes.container}>
       { row.map((proj, _) => (
-        <Grid item xs={4} key={proj.id}>
+        <Grid item xs={12} md={6} lg={4} key={proj.id}>
           <Paper className={classes.paper}>
             <ButtonBase focusRipple key={proj.title} 
               className={classes.image} 
