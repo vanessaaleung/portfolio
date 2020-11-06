@@ -1,7 +1,7 @@
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <MuiThemeProvider theme={theme}>
         <Navbar collapseOnSelect expand="md">
-          <Navbar.Brand as={Link} to="/">Portfolio</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home">Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
@@ -28,7 +28,8 @@ function App() {
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' render={() => (<Redirect to="/home" />)} />
+          <Route exact path='/home' component={Home} />
           <Route exact path='/contact' component={Contact} />
         </Switch>
       </MuiThemeProvider>
