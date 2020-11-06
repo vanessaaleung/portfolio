@@ -54,10 +54,10 @@ span.line {
 
 @media screen and (max-width: 375px) {
   .contact h4 {
-    font-size: 12px;
+    font-size: 15px;
   }
   .email {
-    font-size: 18px;
+    font-size: 25px;
   }
 }
 
