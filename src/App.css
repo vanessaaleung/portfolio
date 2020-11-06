@@ -5,9 +5,26 @@
 /* Home */
 .home {
   margin-top: 100px;
-  margin-left: 5%;
-  margin-right: 5%;
+  overflow-x: hidden;
 }
+@media screen and (max-width: 719px) {
+  .home {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .home {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .home h1, .home p {
+    text-align: center;
+  }
+}
+
 
 /* Contact */
 .contact {
