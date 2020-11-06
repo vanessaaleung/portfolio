@@ -48,6 +48,10 @@
   margin-left: 20px;
 }
 
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
 /* Portfolio */
 .filters {
   float: right;
