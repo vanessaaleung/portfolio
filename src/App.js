@@ -1,7 +1,7 @@
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Contact from './components/Contact';
