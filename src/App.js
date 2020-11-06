@@ -17,20 +17,19 @@ function App() {
     <BrowserRouter>
       <MuiThemeProvider theme={theme}>
         <Navbar collapseOnSelect expand="md">
-          <Navbar.Brand as={Link} to="/home">Portfolio</Navbar.Brand>
+          <Navbar.Brand as={Link} to={process.env.PUBLIC_URL + '/'}>Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="https://medium.com/@vanessaaleung">Blog</Nav.Link>
               <Nav.Link href="https://www.linkedin.com/in/vanessaaleung/">LinkedIn</Nav.Link>
-              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+              <Nav.Link as={Link} to={process.env.PUBLIC_URL + '/contact'}>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
         <Switch>
-          <Route exact path='/' render={() => (<Redirect to="/home" />)} />
-          <Route exact path='/home' component={Home} />
-          <Route exact path='/contact' component={Contact} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
         </Switch>
       </MuiThemeProvider>
     </BrowserRouter>
