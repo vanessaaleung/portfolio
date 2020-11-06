@@ -23,7 +23,7 @@ function App() {
             <Nav className="ml-auto">
               <Nav.Link href="https://medium.com/@vanessaaleung">Blog</Nav.Link>
               <Nav.Link href="https://www.linkedin.com/in/vanessaaleung/">LinkedIn</Nav.Link>
-              <Nav.Link as={Link} to={process.env.PUBLIC_URL + '/contact'}>Contact</Nav.Link>
+              <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
