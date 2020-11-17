@@ -108,8 +108,16 @@ span.line {
   padding-top: 0;
 }
 
-.btn-link:active, .btn-link:focus {
-  font-weight: bold;
+.btn-focus {
+  color: black !important;
+  outline: none !important;
+  text-align: left !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  font-weight: bold !important;
   box-shadow: none !important;
+  text-decoration: underline;
 }
+
+
 

@@ -159,12 +159,12 @@ function Portfolio() {
   return (
     <React.Fragment>
       <div className="filters">
-        <Button variant="link" onClick={() => setFilter('all')}>All</Button>
-        <Button variant="link" onClick={() => setFilter('visualization')}>Visualization</Button>
-        <Button variant="link" onClick={() => setFilter('ds')}>Data Analytics</Button>
-        <Button variant="link" onClick={() => setFilter('dataEng')}>Data Engineering</Button>
-        <Button variant="link" onClick={() => setFilter('web')}>Web</Button>
-        <Button variant="link" onClick={() => setFilter('mobileGame')}>Mobile & Game</Button>
+        <Button variant={filter === 'all' ? "focus" : "link"} onClick={() => setFilter('all')}>All</Button>
+        <Button variant={filter === 'visualization' ? "focus" : "link"} onClick={() => setFilter('visualization')}>Visualization</Button>
+        <Button variant={filter === 'ds' ? "focus" : "link"} onClick={() => setFilter('ds')}>Data Analytics</Button>
+        <Button variant={filter === 'dataEng' ? "focus" : "link"} onClick={() => setFilter('dataEng')}>Data Engineering</Button>
+        <Button variant={filter === 'web' ? "focus" : "link"} onClick={() => setFilter('web')}>Web</Button>
+        <Button variant={filter === 'mobileGame' ? "focus" : "link"} onClick={() => setFilter('mobileGame')}>Mobile & Game</Button>
       </div>
 
       {projLoaded &&
