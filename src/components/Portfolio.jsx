@@ -88,9 +88,14 @@ const useStyles = makeStyles((theme) => ({
 
 function AutoGrid(props) {
   const classes = useStyles();
-
+  props.projects.sort(function(a, b) {
+    if (a.priority == undefined) { return 1; }
+    if (b.priority == undefined) { return -1; }
+    return 0;
+  })
+  console.log(props.projects);
   const rows = [...Array( Math.ceil(props.projects.length / 3) )];
-  const projectRows = rows.map( (row, idx) => 
+  const projectRows = rows.map( (_, idx) => 
                         props.projects.slice(idx * 3, idx * 3 + 3) 
                       );
                       
